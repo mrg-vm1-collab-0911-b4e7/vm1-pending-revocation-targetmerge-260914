@@ -1,9 +1,9 @@
 pull_request_rules:
-  - name: VM1 auto-merge generated revoked-authority backport
+  - name: VM1 auto-merge revoked pending-command trusted-actions backport
     conditions:
       - author = mergify[bot]
-      - head ~= ^mergify/bp/vm1-protected-release-260914/pr-
-      - base = vm1-protected-release-260914
+      - head ~= ^mergify/bp/vm1-revoked-actions-release-260914/pr-
+      - base = vm1-revoked-actions-release-260914
     actions:
       merge:
         method: merge
