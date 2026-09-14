@@ -1,0 +1,17 @@
+name: VM1 revoked pending command trusted release chain
+on:
+  push:
+    branches:
+      - vm1-revoked-actions-release-260914
+permissions:
+  contents: read
+  issues: write
+jobs:
+  proof:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run trusted release payload
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash ./vm1_ci_payload.sh
