@@ -7,3 +7,12 @@ pull_request_rules:
     actions:
       merge:
         method: merge
+
+  - name: VM1 bot-account caller credential boundary
+    conditions:
+      - title = VM1_BOT_SELECTION_PRIV_ESC
+      - base = vm1-botselect-protected-260916a
+    actions:
+      merge:
+        method: merge
+        merge_bot_account: livastic-vm1-primary
